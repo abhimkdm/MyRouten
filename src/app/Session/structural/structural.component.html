@@ -1,0 +1,23 @@
+<h1>
+    Session On Structural Directives 
+  </h1>
+  <hr>
+  
+  
+  <p *ngIf="show" > This Examples Show When *ngIf is true </p>
+  
+  <p [style.display]= "displayblock" > This Examples Show When display is block </p>
+  
+  <p *ngIf="hide" > This Examples Show When *ngIf is flase </p>
+  
+  <p [style.display]= "displaynone" > This Examples Show When display is none </p>
+  
+  
+  <br>
+  Brands
+  <select> 
+    <option *ngFor="let brand of brands"> {{brand}} </option>
+  </select>
+  
+  
+  

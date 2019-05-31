@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  {
-  title = 'notes';
+  title = "I'm from App component";
+
+  message = function() {
+    this.title = "Welcome To Angular";
+  }
 }
