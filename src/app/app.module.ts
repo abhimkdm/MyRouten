@@ -1,24 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { InterpolationComponent } from './Session/interpolation/interpolation.component';
-import { StructuralComponent } from './Session/structural/structural.component';
-import { DirectivesComponent } from './Session/directives/directives.component';
-import { HighlightDirective } from './Session/directives/highlight.directive';
+import { SharedModule } from './Session/shared.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InterpolationComponent,
-    StructuralComponent,
-    DirectivesComponent,
-    HighlightDirective
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [DirectivesComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
