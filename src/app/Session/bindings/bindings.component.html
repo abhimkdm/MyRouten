@@ -3,6 +3,24 @@
     Session On Data Bindings 
   </h1>
   <hr>
+  <fieldset>
+      <legend> Custom Pipes</legend>
+  
+      <h2 >Reverse Pipe : {{ "Angular" | reverse }} </h2>
+  
+      <br>
+      <input [(ngModel)]="filterBrand" />
+      <hr>
+      <table>
+        <tr *ngFor="let brand of brands | arrayFilter : filterBrand">
+            <td>{{brand.Name}}</td>
+            <td>{{brand.Price}}</td>
+         </tr>
+      </table>
+  
+      
+    </fieldset>
+  <br>
 
   <fieldset>
     <legend> Two way Bindings</legend>
@@ -23,6 +41,8 @@
 
       <h2 >Date Format Pipe : {{ '6/1/2019' | date: 'd/M/y'}} </h2>
 
-      <!-- <h2 >Reverse Pipe : {{ "Angular" | reverse }} </h2> -->
+      <h2 >Reverse Pipe : {{ "Angular" | reverse }} </h2>
       
     </fieldset>
+
+<br>
