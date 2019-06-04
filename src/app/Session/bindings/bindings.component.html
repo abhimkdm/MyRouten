@@ -9,9 +9,15 @@
       <h2 >Reverse Pipe : {{ "Angular" | reverse }} </h2>
   
       <br>
-      <input [(ngModel)]="filterBrand" />
+       <b>Filter : </b>
+      <input type="text" [(ngModel)]="filterBrand" /> 
+      <input type="button" (mousemove)="Change()" value="Change" />
       <hr>
-      <table>
+      <table id="brands" (mousemove)="MoouseMove()" >
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
         <tr *ngFor="let brand of brands | arrayFilter : filterBrand">
             <td>{{brand.Name}}</td>
             <td>{{brand.Price}}</td>
