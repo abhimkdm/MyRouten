@@ -8,6 +8,7 @@ import { BindingsComponent } from '../Session/bindings/bindings.component';
 import { FormsModule } from '@angular/forms';
 import { reversePipe } from './pipes/reverse.pipe';
 import { ArrayFilterPipe } from './pipes/array-filter.pipe';
+import { ServicesComponent } from '../Session/services/services.component';
 
 @NgModule({
   imports: [
@@ -21,8 +22,9 @@ import { ArrayFilterPipe } from './pipes/array-filter.pipe';
     HighlightDirective,
     BindingsComponent,
     reversePipe,
-    ArrayFilterPipe
+    ArrayFilterPipe,
+    ServicesComponent
   ],
-  exports: [ BindingsComponent , reversePipe ]
+  exports: [ ServicesComponent ]
 })
 export class SharedModule { }
