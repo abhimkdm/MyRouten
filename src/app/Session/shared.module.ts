@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { reversePipe } from './pipes/reverse.pipe';
 import { ArrayFilterPipe } from './pipes/array-filter.pipe';
 import { ServicesComponent } from '../Session/services/services.component';
+import { BootStrapComponent } from '../Session/boot-strap/boot-strap.component';
 
 @NgModule({
   imports: [
@@ -23,8 +24,9 @@ import { ServicesComponent } from '../Session/services/services.component';
     BindingsComponent,
     reversePipe,
     ArrayFilterPipe,
-    ServicesComponent
+    ServicesComponent,
+    BootStrapComponent
   ],
-  exports: [ ServicesComponent ]
+  exports: [ BootStrapComponent ]
 })
 export class SharedModule { }
