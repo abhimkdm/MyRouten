@@ -11,3 +11,28 @@
     height: 100px;
     border: 1px solid red;
 }
+
+.flexcontainer 
+{
+    border: 2px solid black;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    color:white;
+    padding: 10px;
+}
+
+.flex-item:first-child{
+    background: brown;
+}
+
+.flex-item:nth-child(2){
+    background: green;
+}
+
+.flex-item:nth-child(3){
+    background: yellowgreen;
+}
+

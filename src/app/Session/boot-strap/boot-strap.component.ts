@@ -2,14 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-boot-strap',
-  templateUrl: './Components.component.html',
+  templateUrl: './flex.component.html',
   styleUrls: ['./boot-strap.component.css']
 })
-export class BootStrapComponent implements OnInit {
+export class BootStrapComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
