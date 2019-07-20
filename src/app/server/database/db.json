@@ -1,0 +1,50 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Angular Basics",
+      "description": "Angular is client side framework",
+      "ratings": 4,
+      "tagId": 1
+    },
+    {
+      "id": 2,
+      "title": "Super 30",
+      "description": "Nice movie",
+      "ratings": 5,
+      "tagId": 2
+    },
+    {
+      "id": 2,
+      "title": "Super 30",
+      "description": "Nice movie",
+      "ratings": 5,
+      "tagId": 2
+    },
+    {
+      "id": 3,
+      "title": "Other",
+      "description": "Nice movie",
+      "ratings": 3,
+      "tagId": 3
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "tagname": "Study"
+    },
+    {
+      "id": 2,
+      "tagname": "Films"
+    },
+    {
+      "id": 3,
+      "tagname": "Others"
+    },
+    {
+      "tagname": "Demo Data",
+      "id": 4
+    }
+  ]
+}

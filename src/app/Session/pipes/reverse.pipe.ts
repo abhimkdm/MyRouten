@@ -9,3 +9,4 @@ export class reversePipe implements PipeTransform  {
        return value.split('').reverse().join('');
     }
 }
+

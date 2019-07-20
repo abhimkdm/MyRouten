@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TagsService } from '../services/tags.service';
+import { Itag } from '../models/Itag.Interface';
 
 @Component({
   selector: 'app-tag',
@@ -8,12 +9,17 @@ import { TagsService } from '../services/tags.service';
 })
 export class TagComponent implements OnInit {
 
-  public tags : any;
+  public tags : Itag[];
 
   constructor(private _tagService : TagsService) { }
 
   ngOnInit() {
-   this.tags =  this._tagService.getTags();
+   this._tagService.getTags().subscribe(data=> this.InitData(data));
+   this._tagService.asyncData().subscribe(data=>this.InitData(data));
+  }
+
+  InitData(data : any) {
+    console.table(data);
   }
 
 }

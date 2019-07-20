@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from 'src/app/session/bindings/node_modules/@angular/core/testing';
 
 import { BindingsComponent } from './bindings.component';
 

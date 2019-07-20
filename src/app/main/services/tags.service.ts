@@ -1,16 +1,24 @@
 import { Injectable } from "@angular/core";
 import { Itag } from "../models/Itag.Interface";
+import { HttpClient } from '@angular/common/http';
+import { Observable, interval } from "rxjs";
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
 
 export class TagsService {
 
-    constructor(){}
+    private baseUrl ="http://localhost:3000/tags";
 
-    getTags() : Itag[] {
-        return [ {'Name' : 'Bank Details'},{'Name' : 'Study'},
-                    {'Name' : 'Others'}];
+    constructor(private _http : HttpClient) { }
+
+    getTags(): Observable<Itag[]> { 
+        return this._http.get<Itag[]>(this.baseUrl);
+    }
+
+    asyncData() : Observable<number> {
+        const remoteData : Observable<number> = interval(1000);
+        return remoteData;
     }
 }
