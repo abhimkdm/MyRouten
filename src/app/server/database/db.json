@@ -2,37 +2,108 @@
   "notes": [
     {
       "id": 1,
-      "title": "Angular Basics",
-      "description": "Angular is client side framework",
+      "title": "Five Point SomeOne",
+      "description": "Nice Book by Chetan Bhagat",
       "ratings": 4,
       "tagId": 1
     },
     {
       "id": 2,
-      "title": "Super 30",
-      "description": "Nice movie",
+      "title": "3 Mistakes Of My Life",
+      "description": "Nice Book by Chetan Bhagat",
       "ratings": 5,
-      "tagId": 2
-    },
-    {
-      "id": 2,
-      "title": "Super 30",
-      "description": "Nice movie",
-      "ratings": 5,
-      "tagId": 2
+      "tagId": 1
     },
     {
       "id": 3,
-      "title": "Other",
-      "description": "Nice movie",
+      "title": "Revolution 2020",
+      "description": "Nice Book by Chetan Bhagat",
+      "ratings": 5,
+      "tagId": 1
+    },
+    {
+      "id": 4,
+      "title": "Half Girlfriend",
+      "description": "Nice Book by Chetan Bhagat",
+      "ratings": 5,
+      "tagId": 1
+    },
+    {
+      "id": 5,
+      "title": "2 States",
+      "description": "Nice Book by Chetan Bhagat",
+      "ratings": 5,
+      "tagId": 1
+    },
+    {
+      "id": 6,
+      "title": "Sanju",
+      "description": "Biogpic Of Sanjay Dutt",
+      "ratings": 3,
+      "tagId": 2
+    },
+    {
+      "id": 7,
+      "title": "Super 30",
+      "description": "Biogpic Of Anand Kumar",
+      "ratings": 5,
+      "tagId": 2
+    },
+    {
+      "id": 8,
+      "title": "PM Narendra Modi",
+      "description": "Biogpic Of PM Narendra Modi",
+      "ratings": 5,
+      "tagId": 2
+    },
+    {
+      "id": 9,
+      "title": "Thackeray",
+      "description": "Biogpic Of Thackeray",
+      "ratings": 4,
+      "tagId": 2
+    },
+    {
+      "id": 10,
+      "title": "Sachin: A Billion Dreams",
+      "description": "Biogpic Of Sachin",
+      "ratings": 5,
+      "tagId": 2
+    },
+    {
+      "id": 11,
+      "title": "Gmail Password",
+      "description": "Do not Ask..!!",
       "ratings": 3,
       "tagId": 3
+    },
+    {
+      "id": 12,
+      "title": "Office Address",
+      "description": "Search On Google..!!",
+      "ratings": 2,
+      "tagId": 3
+    },
+    {
+      "id": 13,
+      "title": "Birthdays",
+      "description": "Please list B'days..!!",
+      "ratings": 3,
+      "tagId": 3
+    },
+    {
+      "id": 14,
+      "title": "Shopping",
+      "description": "Buy Water Melon, Milk etc.",
+      "ratings": 1,
+      "tagId": 3
     }
+
   ],
   "tags": [
     {
       "id": 1,
-      "tagname": "Study"
+      "tagname": "Books"
     },
     {
       "id": 2,
@@ -41,10 +112,6 @@
     {
       "id": 3,
       "tagname": "Others"
-    },
-    {
-      "tagname": "Demo Data",
-      "id": 4
     }
   ]
 }

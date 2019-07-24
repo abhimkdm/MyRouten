@@ -6,6 +6,7 @@ import { NavComponent } from './main/nav/nav.component';
 import { TagComponent } from './main/tag/tag.component';
 import { NotesComponent } from './main/notes/notes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StarComponent } from './main/star/star.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavComponent,
     TagComponent,
-    NotesComponent
+    NotesComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

@@ -15,10 +15,11 @@ export class TagComponent implements OnInit {
 
   ngOnInit() {
    this._tagService.getTags().subscribe(data=> this.InitData(data));
-   this._tagService.asyncData().subscribe(data=>this.InitData(data));
+  // this._tagService.asyncData().subscribe(data=>this.InitData(data));
   }
 
   InitData(data : any) {
+    this.tags=data;
     console.table(data);
   }
 
