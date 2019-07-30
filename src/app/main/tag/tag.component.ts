@@ -20,7 +20,7 @@ export class TagComponent implements OnInit {
 
   InitData(data : any) {
     this.tags=data;
-    console.table(data);
+   // console.table(data);
   }
 
 }

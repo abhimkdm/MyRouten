@@ -16,7 +16,7 @@ export class StarComponent implements OnChanges {
   ngOnChanges(): void {
     this.blackStar= Array(this.rating).fill(0);
     this.whiteStar= Array(5-this.rating).fill(0);
-    console.log(this.rating);
+    //console.log(this.rating);
   }
 
 }

@@ -7,6 +7,8 @@ import { TagComponent } from './main/tag/tag.component';
 import { NotesComponent } from './main/notes/notes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StarComponent } from './main/star/star.component';
+import { FiltnotesPipe } from './main/filters/filtnotes.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { StarComponent } from './main/star/star.component';
     NavComponent,
     TagComponent,
     NotesComponent,
-    StarComponent
+    StarComponent,
+    FiltnotesPipe
   ],
   imports: [
     BrowserModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

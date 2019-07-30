@@ -8,12 +8,16 @@ import { Observable } from 'rxjs';
 })
 export class NotesService {
 
-  baseUrl : string ='http://localhost:3000/notes';
+  private baseUrl : string ='http://localhost:3000/notes';
 
   constructor(private _http: HttpClient) { }
 
   getNotes() : Observable<Inotes[]> {
    return this._http.get<Inotes[]>(this.baseUrl);
+  }
+
+  deleteNotes(id : number) : Observable<any> {
+    return this._http.delete(this.baseUrl+'/'+id);
   }
 
 }

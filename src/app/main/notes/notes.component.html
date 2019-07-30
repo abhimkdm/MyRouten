@@ -1,6 +1,7 @@
 <div class="row mt-2">
     <div class="col-md-10">
-        <input class="form-control form-control-lg border-info" type="text" placeholder="Search Notes">
+        <input class="form-control form-control-lg border-info"
+         type="text" [(ngModel)]="filtText" placeholder="Search Notes">
     </div>
     <div class="col-md-2">
         <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal"
@@ -8,7 +9,7 @@
     </div>
 </div>
 <div class="row mt-4">
-    <div class="col-md-4" *ngFor="let onenote of notes"  >
+    <div class="col-md-4" *ngFor="let onenote of notes | filtnotes : filtText "  >
         <div class="card border-info mb-3" style="max-width: 18rem;height: 200px">
             <div class="card-header">{{onenote.title}}</div>
             <div class="card-body text-info">
@@ -16,7 +17,7 @@
             </div>
             <div class="card-footer text-muted">
                 <app-star [rating]='onenote.ratings'></app-star>
-                <img src="../assets/images/delete.png" class="float-right" alt="Edit">
+                <img src="../assets/images/delete.png" data-toggle="modal" data-target="#deleteModal" (click)='store(onenote.id)' class="float-right" alt="Edit">
                 <img src="../assets/images/edit.png" class="float-right" alt="Delete">
             </div>
         </div>
@@ -24,7 +25,7 @@
     
 </div>
 
-<!-- Modal -->
+<!-- Modal Add -->
 <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -74,3 +75,24 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Notes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure, you want to delete this data?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='deleteNotes()'>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
