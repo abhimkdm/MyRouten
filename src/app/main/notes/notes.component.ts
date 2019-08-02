@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../services/notes.service';
 import { Inotes } from '../models/Inotes.interface';
+import { notesModel } from '../models/notes.model';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
-  styles: []
+  styleUrls : ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
 
   public notes : Inotes[];
+  public note : notesModel = new notesModel();
   public id : number;
-
+  //titleError : string ='Please enter title';
+ 
   constructor(private _ns : NotesService) { }
 
   ngOnInit() {
@@ -37,6 +40,15 @@ export class NotesComponent implements OnInit {
 
   refreshUI() {
     this.notes = this.notes.filter(d=>d.id !== this.id);
+  }
+
+  log(control) {
+    console.log(control);
+  }
+
+  addNotes(noteObj : Inotes) {
+    console.log(noteObj);
+    this.note = new notesModel();
   }
   
 }

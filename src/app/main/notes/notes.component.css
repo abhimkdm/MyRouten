@@ -1,0 +1,3 @@
+.btn-primary.disabled {
+    cursor: not-allowed;
+}
