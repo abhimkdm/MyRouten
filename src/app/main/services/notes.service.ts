@@ -20,4 +20,8 @@ export class NotesService {
     return this._http.delete(this.baseUrl+'/'+id);
   }
 
+  addNotes(note : Inotes) : Observable<any> {
+    return this._http.post(this.baseUrl, note);
+  }
+
 }

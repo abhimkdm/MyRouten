@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../services/notes.service';
 import { Inotes } from '../models/Inotes.interface';
 import { notesModel } from '../models/notes.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-notes',
@@ -34,21 +35,36 @@ export class NotesComponent implements OnInit {
 
   //Delete Data
   deleteNotes() {
-    this._ns.deleteNotes(this.id).subscribe(data => this.refreshUI());
+    this._ns.deleteNotes(this.id).subscribe(data => this.refreshUIAfterDelete());
     //console.log('delete' + this.id);
   }
 
-  refreshUI() {
+  refreshUIAfterDelete() {
     this.notes = this.notes.filter(d=>d.id !== this.id);
+  }
+
+  // Add notes
+  addNotes(noteObj : Inotes, notesForm : NgForm) {
+    this._ns.addNotes(noteObj).subscribe(data => this.refreshUI(data, notesForm));
+    
+  }
+  
+  refreshUI(data : Inotes, notesForm : NgForm) {
+    this.notes.push(data);
+    notesForm.form.reset();
+    this.clear();
+  }
+
+  //Edit Notes
+  editNotes(id : number) {
+    this.note = this.notes.find(d=>d.id == id); 
   }
 
   log(control) {
     console.log(control);
   }
 
-  addNotes(noteObj : Inotes) {
-    console.log(noteObj);
+  clear(){
     this.note = new notesModel();
   }
-  
 }
